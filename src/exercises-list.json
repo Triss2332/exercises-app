@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "1",
+    "title": "Exercise 1",
+    "objective": "Array of objects",
+    "score": 10,
+    "status": "To do",
+    "completionDate": 1671034811
+  },
+  {
+    "slug": "2",
+    "title": "Exercise 2",
+    "objective": "Array of objects",
+    "score": 20,
+    "status": "In progress",
+    "completionDate": 1671034811
+  },
+  {
+    "slug": "3",
+    "title": "Exercise 3",
+    "objective": "Array of objects",
+    "score": 30,
+    "status": "To do",
+    "completionDate": 1671034811
+  },
+  {
+    "slug": "4",
+    "title": "Exercise 4",
+    "objective": "Array of objects",
+    "score": 40,
+    "status": "Done",
+    "completionDate": 1671034811
+  }
+]
