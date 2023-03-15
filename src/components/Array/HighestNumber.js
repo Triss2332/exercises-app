@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const HighFrequency = () => {
+const HighhestNumber = () => {
   const array = [2, 3, 8, 6, 4, 10, 7, 12, 25];
   const arrayFormatted = array.toString().replace(/,/g, " ");
   const [showResult, setShowResult] = useState(false);
@@ -20,4 +20,4 @@ const HighFrequency = () => {
   );
 };
 
-export default HighFrequency;
+export default HighhestNumber;

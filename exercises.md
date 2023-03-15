@@ -30,17 +30,17 @@ Exercise object structure:
 ## ARRAY
 
 ```
-Given an array of numbers return the number with the highest frequency
+[OK - da ricontrollare] Given an array of numbers return the number with the highest frequency
 ```
 
 ## ARRAY OF OBJECTS
 
 ```
-Write a function that takes an array of objects and a property name as arguments and returns an array of the unique values for that property among the objects in the array. For example, if you pass the array of books and the property "author", the function should return an array of the unique author names.
+[OK] Write a function that takes an array of objects and a property name as arguments and returns an array of the unique values for that property among the objects in the array. For example, if you pass the array of books and the property "author", the function should return an array of the unique author names.
 ```
 
 ```
-Write a function that takes an array of objects and a property name as arguments and returns the total number of objects in the array that have a falsy value for that property. For example, if you pass the array of books and the property "available", the function should return the number of books that are currently not available.
+[OK] Write a function that takes an array of objects and a property name as arguments and returns the total number of objects in the array that have a falsy value for that property. For example, if you pass the array of books and the property "available", the function should return the number of books that are currently not available.
 ```
 
 ```
