@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import ArrayOfObjectsFirst from "../src/components/ArrayOfObjects/ArrayOfObjectsFirst";
-import ArrayOfObjectsSecond from "../src/components/ArrayOfObjects/ArrayOfObjectsSecond";
-import ArrayOfObjectsThird from "../src/components/ArrayOfObjects/ArrayOfObjectsThird";
+// import ArrayOfObjectsFirst from "../src/components/ArrayOfObjects/ArrayOfObjectsFirst";
+// import ArrayOfObjectsSecond from "../src/components/ArrayOfObjects/ArrayOfObjectsSecond";
+// import ArrayOfObjectsThird from "../src/components/ArrayOfObjects/ArrayOfObjectsThird";
 import AddCardButton from "../src/components/common/AddCardButton";
-import Card from "../src/components/common/Card";
-import Columns from "../src/components/common/Column";
+import TaskColumn from "../src/components/common/TaskColumn";
 import Text from "../src/components/common/Text";
+import { availableStates } from "../src/data";
 import data from "../src/exercises-list.json";
 
 const Dashboard = () => {
-  const colStatus = ["To do", "In progress", "In review", "Done"];
-
-  const [selected, setSelected] = useState();
   const [jsonData, setJsonData] = useState(data);
 
   const handleChange = (event, title) => {
@@ -26,6 +23,8 @@ const Dashboard = () => {
     setJsonData(json);
   };
 
+  console.log(availableStates, "STATI DISPONIBILI");
+
   return (
     <>
       <div>
@@ -38,30 +37,15 @@ const Dashboard = () => {
         </div>
         <div className="columnContainer">
           {/* MAP SULLO STATUS PER CREARE LE COLONNE  */}
-          {colStatus.map((singleColStatus) => {
+          {/* exerciseList, taskStatus, handleChange */}
+          {availableStates.map((taskStatus) => {
             return (
-              <Columns
-                colName={singleColStatus}
-                data={jsonData}
-                key={singleColStatus}
-              >
-                {/* MAP SULL'ARRAY PER CREARE LE CARD IN BASE A QUANTI OGGETTI CI SONO IN CORRISPONDENZA ALLO STATUS  */}
-                {jsonData?.map((item) => {
-                  if (item.status === singleColStatus) {
-                    return (
-                      <Card
-                        key={item.title}
-                        title={item.title}
-                        objective={item.objective}
-                        value={item.status}
-                        staticStatus={colStatus}
-                        handleChange={(e) => handleChange(e, item.title)}
-                        data={jsonData}
-                      />
-                    );
-                  }
-                })}
-              </Columns>
+              <TaskColumn
+                taskStatus={taskStatus}
+                key={taskStatus}
+                exerciseList={jsonData}
+                handleChange={handleChange}
+              ></TaskColumn>
             );
           })}
         </div>

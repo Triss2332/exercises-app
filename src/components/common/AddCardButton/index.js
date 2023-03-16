@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import styles from "./addCardButton.module.scss";
 
-const AddCardButton = ({ data }) => {
-  const [uploadCard, setUpladCard] = useState({
-    slug: "5",
-    title: "Exercise 5",
-    objective: "Array of objects",
-    score: 50,
-    status: "To do",
-    completionDate: 1671034811,
-  });
+const AddCardButton = ({ jsonData }) => {
+  // Click sul bottone
+  // aggiunge un oggetto a jsonData
+
+  // const [uploadCard, setUpladCard] = useState({
+  //   slug: "5",
+  //   title: "Exercise 5",
+  //   objective: "Array of objects",
+  //   score: 50,
+  //   status: "To do",
+  //   completionDate: 1671034811,
+  // });
 
   const addCard = () => {
-    data.push(uploadCard);
+    //   jsonData.push(uploadCard);
+    console.log("Click");
   };
-  console.log(data, "DATA UPLOADED");
+
+  console.log(jsonData, "json data");
 
   return (
     <>

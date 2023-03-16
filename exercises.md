@@ -5,9 +5,13 @@
 Create a dashboard application to monitor your progress with exercises.
 The dashboard should contain these components:
 
-- Exercise List: show a card for each exercise in the data object
+-[OK] Exercise List: show a card for each exercise in the data object
 
-- Exercise card: show exercise info and status
+-[OK] Exercise card: show exercise info and status
+
+-[OK] Change status task
+
+- Add new task
 
 - Graph: A graph of your choice that show a meaningful statistics about exercises (%completion, avg score, trends)
 

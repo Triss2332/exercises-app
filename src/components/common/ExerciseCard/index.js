@@ -1,19 +1,22 @@
 import React from "react";
+import { availableStates } from "../../../data";
 import styles from "./card.module.scss";
 
-const Card = ({ title, objective, staticStatus, handleChange, value }) => {
+const ExerciseCard = ({ title, objective, handleChange, currentStatus }) => {
   return (
     <>
       <div className={styles.externalContainer}>
         <div className={styles.innerContainer}>
           <div className={styles.title}>{title}</div>
           <div className={styles.description}>{objective}</div>
+          {/* STATUS CHANGER */}
+          {/* currentStatus - statusList - handleChange */}
           <select
             className={styles.select}
-            value={value}
+            value={currentStatus}
             onChange={handleChange}
           >
-            {staticStatus.map((item) => {
+            {availableStates.map((item) => {
               return (
                 <option key={item} value={item}>
                   {item}
@@ -27,4 +30,4 @@ const Card = ({ title, objective, staticStatus, handleChange, value }) => {
   );
 };
 
-export default Card;
+export default ExerciseCard;
