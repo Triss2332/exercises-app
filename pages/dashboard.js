@@ -33,7 +33,7 @@ const Dashboard = () => {
         {/* <ArrayOfObjectsThird /> */}
         <div className="container">
           <Text userName={"Beatrice"} />
-          <AddCardButton data={jsonData} />
+          <AddCardButton exerciseList={jsonData} />
         </div>
         <div className="columnContainer">
           {/* MAP SULLO STATUS PER CREARE LE COLONNE  */}
