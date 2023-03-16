@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./addCardButton.module.scss";
 
-const AddCardButton = ({ data }) => {
+const AddCardButton = ({ exerciseList }) => {
   // Click sul bottone
-  // aggiunge un oggetto a data
+  // aggiunge un oggetto a exerciseList
+
+  //exerciseList non contiene i dati aggiornati, perché non lo aggiorna finché non cambio stato a una card esistente?
 
   const newCard = {
     slug: "5",
@@ -15,8 +17,8 @@ const AddCardButton = ({ data }) => {
   };
 
   const addCard = () => {
-    data.push(newCard);
-    console.log("Click", data);
+    exerciseList.push(newCard);
+    console.log("Click", exerciseList);
   };
 
   return (
